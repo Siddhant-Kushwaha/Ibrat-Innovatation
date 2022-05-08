@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* navbar section */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgb(133, 133, 133);
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5.2rem;
+    width: 5.2rem;
+    border-radius: 50%;
+    background: black;
+}
+nav .logo h6 {
+    font-size: 2.7rem;
+    color: white;
+    font-family: monospace;
+    font-weight: normal;
+    /* letter-spacing: -0.4rem; */
+}
+
+nav .links {
+    display: flex;
+    gap: 8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .links a {
+    color: black;
+    text-decoration: none;
+}
+
+nav .links a .link-box {
+    gap: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .links a .link-box img {
+    width: 30px;
+    height: 30px;
+}
+
+nav .links a .link-box h6 {
+    font-family: "Nunito";
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+nav .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav .login i {
+    font-size: 1.7rem;
+}
+
+nav .login h6 {
+    font-size: 1.75rem;
+}
+/* end of navbar section */
+
+/* start of home section */
+.home {
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 3rem;
+    height: 100vh;
+    width: 100vw;
+}
+.home .home-heading {
+    /* margin-top: 5rem; */
+    margin-bottom: 1rem;
+    font-size: 4.6rem;
+    font-weight: 500;
+}
+.home .home-img-gallery {
+    /* margin-bottom: rem; */
+    overflow: hidden;
+    border-radius: 1.7rem;
+    height: 60vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+}
+
+.home .home-img-gallery .img-box {
+    position: relative;
+    min-height: 0;
+    transition: 0.2s;
+    min-width: 0;
+    height: 100%;
+    /* flex: 25%; */
+    width: 25%;
+}
+
+.overlay,
+.overlay-heading,
+.overlay-button {
+    position: absolute;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.overlay-heading {
+    top: 3rem;
+    left: 5rem;
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+    color: white;
+    font-weight: normal;
+    z-index: 99;
+}
+.overlay-button {
+    top: 3rem;
+    right: 2rem;
+    font-size: 3rem;
+    color: white;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.home .home-img-gallery .img-box:hover .overlay-button {
+    opacity: 1;
+}
+.home .home-img-gallery .img-box:nth-child(3) {
+    width: 50%;
+}
+
+.home .home-img-gallery .img-box img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/* end of home section */
